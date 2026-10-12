@@ -1,0 +1,1626 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desa Limbong — Komunitas Adat Limbong, Tana Rongkong, Luwu Utara</title>
+  <meta name="description"
+    content="Profil Desa Limbong dan komunitas adat Limbong, Kecamatan Rongkong, Kabupaten Luwu Utara, Sulawesi Selatan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&amp;family=Source+Sans+3:wght@400;600&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    /* [TEMA] Warna dan radius yang dipakai seluruh halaman */
+    :root {
+      --cream: #f7f2e7;
+      --cream2: #efe6d3;
+      --green: #3f5a3a;
+      --green2: #2e4429;
+      --brown: #6b4a32;
+      --maroon: #963423;
+      --text: #2b241e;
+      --line: #d9cbb0;
+      --r: 6px
+    }
+
+    /* [RESET] Reset margin, padding, dan ukuran elemen */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    /* [DOKUMEN] Scroll halus dan jarak untuk tautan anchor */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 68px
+    }
+
+    /* [TIPOGRAFI DASAR] Font, warna teks, dan latar halaman */
+    body {
+      font: 17px/1.7 'Source Sans 3', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden
+    }
+
+    /* [JUDUL] Font dan tinggi baris untuk semua heading */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--green2);
+      line-height: 1.2
+    }
+
+    /* [JUDUL BAGIAN] Ukuran dan jarak heading level 2 */
+    h2 {
+      font-size: 2.1rem;
+      margin-bottom: .4rem
+    }
+
+    /* [JUDUL KECIL] Ukuran dan jarak heading level 3 */
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: .4rem
+    }
+
+    /* [MEDIA GLOBAL] Batasi gambar dan video agar responsif */
+    img,
+    video {
+      max-width: 100%
+    }
+
+    /* [PARAGRAF] Jarak antarparagraf */
+    p {
+      margin-bottom: 1rem
+    }
+
+    /* [AKSESIBILITAS] Penanda fokus keyboard */
+    :focus-visible {
+      outline: 3px solid var(--maroon);
+      outline-offset: 2px
+    }
+
+    /* [KONTENER] Lebar maksimum dan padding konten */
+    .wrap {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 18px
+    }
+
+    /* [BAGIAN HALAMAN] Jarak vertikal setiap section */
+    section {
+      padding: 64px 0;
+      position: relative
+    }
+
+    /* [PEMISAH BAGIAN] Motif garis antar-section */
+    section+section::before {
+      content: "";
+      display: block;
+      height: 10px;
+      max-width: none;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: repeating-linear-gradient(90deg, var(--maroon) 0 12px, transparent 12px 18px, var(--brown) 18px 24px, transparent 24px 30px);
+      opacity: .35;
+      width: 100%
+    }
+
+    /* [LATAR SELANG-SELING] Latar section alternatif */
+    .alt {
+      background: var(--cream2)
+    }
+
+    /* [TEKS PENGANTAR] Lebar dan warna paragraf lead */
+    .lead {
+      color: var(--brown);
+      margin-bottom: 1.6rem;
+      max-width: 62ch
+    }
+
+    /* [PENGANTAR POTENSI] Gunakan lebar penuh kontainer */
+    .potensi-lead {
+      max-width: none
+    }
+
+    /* [GRID] Jarak dasar untuk kumpulan kolom */
+    .grid {
+      display: grid;
+      gap: 16px
+    }
+
+    /* [KARTU] Tampilan dasar kartu konten */
+    .card {
+      background: #fffaf0;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--maroon);
+      border-radius: var(--r);
+      padding: 20px;
+      transition: transform .25s, box-shadow .25s
+    }
+
+    /* [KARTU HOVER] Efek saat kartu diarahkan pointer */
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(60, 40, 20, .12)
+    }
+
+    /* [PLACEHOLDER MEDIA] Ukuran dasar kotak gambar/video */
+    .ph {
+      aspect-ratio: 4/3;
+      background: var(--cream2) repeating-linear-gradient(45deg, transparent 0 10px, rgba(107, 74, 50, .06) 10px 20px);
+      border: 1px dashed var(--brown);
+      border-radius: var(--r);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: .85rem;
+      color: var(--brown);
+      padding: 8px;
+      margin-bottom: 12px
+    }
+
+    /* [MEDIA LEBAR] Rasio kotak dengan class wide */
+    .ph.wide {
+      aspect-ratio: 16/9
+    }
+
+    /* [FOTO PERSAWAHAN] Rasio khusus foto sawah */
+    .persawahan-photo {
+      aspect-ratio: 9/9
+    }
+
+    /* [ISI MEDIA] Cara gambar/video memenuhi kotak */
+    .ph img,
+    .ph video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--r)
+    }
+
+    /* [HERO PERTANIAN] Gambar besar sebagai fokus utama sumber daya */
+    .farm-hero {
+      position: relative;
+      min-height: 420px;
+      aspect-ratio: 16/9;
+      padding: 0;
+      overflow: hidden;
+      background: var(--green2);
+      border: 3px solid var(--cream);
+      box-shadow: 0 18px 40px rgba(35, 30, 20, .18)
+    }
+
+    .farm-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 58%;
+      display: block;
+      transform-origin: center;
+      will-change: transform;
+      transition: transform 2.5s cubic-bezier(.22, 1, .36, 1)
+    }
+
+    .farm-hero:hover img {
+      transform: scale(1.04)
+    }
+
+    .farm-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 38%, rgba(23, 37, 23, .78) 100%);
+      pointer-events: none
+    }
+
+    .farm-hero__content {
+      position: absolute;
+      z-index: 1;
+      top: 70%;
+      left: 50%;
+      width: min(88%, 760px);
+      padding: clamp(25px, 5vw, 48px);
+      color: #fffaf0;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    .farm-hero__eyebrow {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #f0d99c;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase
+    }
+
+    .farm-hero h3 {
+      max-width: 720px;
+      color: #fffaf0;
+      font-size: clamp(2rem, 5vw, 4rem);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .35)
+    }
+
+    .farm-hero p {
+      max-width: 690px;
+      margin: 10px 0 0;
+      color: #eee5d2;
+      font-size: clamp(.95rem, 2vw, 1.1rem)
+    }
+
+    .farm-hero__caption {
+      position: absolute;
+      z-index: 2;
+      top: 18px;
+      right: 18px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, .54);
+      border-radius: 99px;
+      background: rgba(24, 39, 24, .58);
+      color: #fff;
+      font-size: .7rem;
+      backdrop-filter: blur(6px)
+    }
+
+    /* [BINGKAI FOTO] Foto mengisi area sampai border */
+    .photo-frame {
+      display: block;
+      padding: 0;
+      border-style: solid;
+      overflow: hidden
+    }
+
+    /* [FOTO DALAM BINGKAI] Hilangkan ruang inline di bawah gambar */
+    .photo-frame>img {
+      display: block
+    }
+
+    /* [FOTO RUMAH ADAT] Rasio kotak untuk foto portrait */
+    .house-photo {
+      aspect-ratio: 1/1
+    }
+
+    /* [FOTO AWAN] Rasio kotak untuk kolase portrait */
+    .cloud-photo {
+      aspect-ratio: 1/1
+    }
+
+    /* [FOTO SEJARAH] Bingkai plang adat */
+    #sejarah .history-photo {
+      padding: 0;
+      overflow: hidden
+    }
+
+    /* [TEKS SEJARAH] Perataan paragraf sejarah */
+    .history-copy {
+      text-align: justify
+    }
+
+    /* [JUDUL SEJARAH] Perataan dan posisi judul */
+    .history-title {
+      text-align: center;
+      transform: translateY(-25px)
+    }
+
+    /* [KARTU SUHU] Susunan screenshot dan informasi suhu */
+    .weather-feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px
+    }
+
+    /* [ANGKA SUHU] Area rentang suhu */
+    .temperature-reading {
+      width: 100%;
+      min-width: 0
+    }
+
+    /* [IKON SUHU] Jarak ikon dari caption */
+    .temperature-reading .ico {
+      display: block;
+      margin-bottom: 4px
+    }
+
+    /* [CAPTION SUHU] Label kisaran suhu */
+    .temperature-caption {
+      display: block;
+      color: var(--brown);
+      font-size: .75rem;
+      font-weight: 600;
+      line-height: 1.2
+    }
+
+    /* [NILAI SUHU] Angka suhu utama */
+    .temperature-value {
+      display: block;
+      margin-top: 4px;
+      color: var(--maroon);
+      font: 700 2.8rem/1 'Cormorant Garamond', serif;
+      white-space: nowrap
+    }
+
+    /* [SATUAN SUHU] Ukuran satuan Celsius */
+    .temperature-value small {
+      margin-left: 2px;
+      font-size: 1.15rem
+    }
+
+    /* [SKALA SUHU] Garis gradasi suhu */
+    .temperature-scale {
+      position: relative;
+      height: 7px;
+      margin: 12px 0 7px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #718c75, #d5b45c, #a34b37)
+    }
+
+    /* [TITIK SKALA] Penanda batas bawah dan atas */
+    .temperature-scale::before,
+    .temperature-scale::after {
+      position: absolute;
+      top: 50%;
+      width: 11px;
+      height: 11px;
+      content: "";
+      border: 2px solid #fffaf0;
+      border-radius: 50%;
+      background: var(--maroon);
+      transform: translateY(-50%)
+    }
+
+    /* [BATAS DINGIN] Posisi penanda minimum */
+    .temperature-scale::before {
+      left: 0
+    }
+
+    /* [BATAS HANGAT] Posisi penanda maksimum */
+    .temperature-scale::after {
+      right: 0
+    }
+
+    /* [LABEL SKALA] Keterangan malam dan siang */
+    .temperature-labels {
+      display: flex;
+      justify-content: space-between;
+      gap: 4px;
+      color: var(--brown);
+      font-size: .7rem;
+      line-height: 1.2
+    }
+
+    /* [FOTO SUHU] Rasio dan bingkai screenshot cuaca */
+    .weather-photo {
+      width: 100%;
+      aspect-ratio: 12/9;
+      padding: 0;
+      margin: 0 auto;
+      border-style: solid;
+      overflow: hidden
+    }
+
+    /* [CROP FOTO SUHU] Fokus crop pada informasi suhu */
+    .weather-photo img {
+      object-fit: cover;
+      object-position: center 23%
+    }
+
+    /* [NAVBAR] Header navigasi tetap di bagian atas */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 242, 231, .96);
+      border-bottom: 2px solid var(--maroon)
+    }
+
+    /* [BAR NAVIGASI] Susunan brand dan menu */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 60px
+    }
+
+    /* [BRAND] Nama desa di navbar */
+    .brand {
+      font: 700 1.4rem 'Cormorant Garamond', serif;
+      color: var(--green2);
+      text-decoration: none
+    }
+
+    /* [TOMBOL MENU] Tombol hamburger untuk layar kecil */
+    .burger {
+      display: block;
+      min-width: 44px;
+      min-height: 44px;
+      background: none;
+      border: 0;
+      cursor: pointer
+    }
+
+    /* [GARIS HAMBURGER] Bentuk garis ikon menu */
+    .burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin: 5px auto;
+      background: var(--green2);
+      transition: .3s
+    }
+
+    /* [ANIMASI MENU] Bentuk silang ketika menu terbuka */
+    .burger[aria-expanded=true] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg)
+    }
+
+    .burger[aria-expanded=true] span:nth-child(2) {
+      opacity: 0
+    }
+
+    .burger[aria-expanded=true] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg)
+    }
+
+    /* [DAFTAR MENU] Panel navigasi layar kecil */
+    .menu {
+      list-style: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background: var(--cream);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s;
+      border-bottom: 2px solid var(--maroon)
+    }
+
+    /* [MENU TERBUKA] Tinggi panel saat tombol aktif */
+    .menu.open {
+      max-height: 520px
+    }
+
+    /* [TAUTAN MENU] Ukuran area dan tampilan tautan */
+    .menu a {
+      display: block;
+      padding: 12px 18px;
+      min-height: 44px;
+      color: var(--text);
+      text-decoration: none;
+      border-left: 4px solid transparent;
+      transition: color .2s ease, background-color .2s ease, padding-left .2s ease
+    }
+
+    /* [HOVER MENU] Efek pointer dan fokus keyboard */
+    .menu a:hover,
+    .menu a:focus-visible {
+      color: var(--maroon);
+      background: rgba(138, 31, 43, .07);
+      border-left-color: var(--maroon);
+      padding-left: 24px
+    }
+
+    /* [MENU AKTIF] Penanda section yang sedang dibaca */
+    .menu a.active {
+      color: var(--maroon);
+      border-left-color: var(--maroon);
+      font-weight: 600
+    }
+
+    /* [HERO] Bagian pembuka dan latar utama */
+    #beranda {
+      padding: 56px 0;
+      background: var(--green2);
+      color: var(--cream)
+    }
+
+    /* [VIDEO HERO] Video sebagai latar dengan lapisan hijau untuk keterbacaan */
+    #beranda .hero-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      pointer-events: none
+    }
+
+    #beranda::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(46, 68, 41, .72);
+      pointer-events: none
+    }
+
+    #beranda>.wrap {
+      position: relative;
+      z-index: 1
+    }
+
+    /* [JUDUL HERO] Nama Desa Limbong */
+    #beranda h1 {
+      color: var(--cream);
+      font-size: 3rem
+    }
+
+    /* [SUBJUDUL HERO] Keterangan lokasi dan program KKN */
+    .sub {
+      font-size: 1.15rem;
+      margin: .4rem 0 1.2rem;
+      color: #e6d9bd
+    }
+
+    /* [TAGLINE] Slogan halaman */
+    .tag {
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: #e6d9bd
+    }
+
+    /* [TOMBOL HERO] Tautan menuju bagian sejarah */
+    .btn {
+      display: inline-block;
+      min-height: 44px;
+      padding: 10px 24px;
+      background: var(--maroon);
+      color: #fff;
+      text-decoration: none;
+      border-radius: var(--r);
+      margin: 1rem 0 1.6rem
+    }
+
+    /* [FAKTA DESA] Grid ringkasan informasi */
+    .facts {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 1.4rem
+    }
+
+    /* [ITEM FAKTA] Tampilan setiap informasi ringkas */
+    .facts div {
+      background: rgba(255, 250, 240, .1);
+      border: 1px solid rgba(230, 217, 189, .3);
+      border-radius: var(--r);
+      padding: 10px 12px;
+      font-size: .95rem
+    }
+
+    /* [LABEL FAKTA] Nama kategori informasi */
+    .facts b {
+      display: block;
+      font-size: .8rem;
+      color: #d9c59a;
+      font-weight: 400
+    }
+
+    /* [MEDIA HERO] Warna placeholder/video pada bagian pembuka */
+    #beranda .ph {
+      background-color: rgba(255, 255, 255, .08);
+      color: #e6d9bd;
+      border-color: #d9c59a
+    }
+
+    /* [KUTIPAN] Quote dan blok kutipan */
+    blockquote,
+    .quote {
+      border-left: 4px solid var(--maroon);
+      background: #fffaf0;
+      padding: 14px 18px;
+      border-radius: var(--r);
+      font-style: italic;
+      margin: 1.2rem 0
+    }
+
+    /* [SILSILAH] Susunan alur keturunan */
+    .flow {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 1.4rem 0
+    }
+
+    /* [ITEM SILSILAH] Kotak tiap nama dalam alur */
+    .flow li {
+      background: var(--green);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: var(--r);
+      text-align: center
+    }
+
+    /* [PANAH SILSILAH] Penghubung antar nama */
+    .flow li+li::before {
+      content: "↓";
+      display: block;
+      color: var(--maroon);
+      margin: -6px 0 2px;
+      font-weight: 700
+    }
+
+    /* [TIMELINE] Garis dan jarak riwayat kepemimpinan */
+    .tl {
+      list-style: none;
+      border-left: 3px solid var(--maroon);
+      margin: 1.6rem 0 1.6rem 8px;
+      padding-left: 20px
+    }
+
+    /* [ITEM TIMELINE] Jarak dan posisi setiap tahun */
+    .tl li {
+      position: relative;
+      margin-bottom: 22px
+    }
+
+    /* [TITIK TIMELINE] Penanda tahun pada garis */
+    .tl li::before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 3px solid var(--maroon)
+    }
+
+    /* [TAHUN TIMELINE] Ukuran dan warna label tahun */
+    .tl b {
+      font: 700 1.5rem 'Cormorant Garamond', serif;
+      color: var(--maroon)
+    }
+
+    /* [AKORDION] Panel proses pengangkatan Tomakaka */
+    details {
+      background: #fffaf0;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      margin-bottom: 10px
+    }
+
+    /* [JUDUL AKORDION] Baris yang dapat dibuka */
+    summary {
+      cursor: pointer;
+      min-height: 44px;
+      padding: 10px 16px;
+      font-weight: 600;
+      color: var(--green2);
+      list-style: none
+    }
+
+    /* [IKON AKORDION] Tanda plus/minus */
+    summary::after {
+      content: "+";
+      float: right;
+      font-size: 1.3rem;
+      color: var(--maroon)
+    }
+
+    /* [AKORDION TERBUKA] Ubah plus menjadi minus */
+    details[open] summary::after {
+      content: "−"
+    }
+
+    /* [ISI AKORDION] Padding isi panel */
+    .acc-body {
+      padding: 0 16px 8px
+    }
+
+    /* [PERCAKAPAN] Susunan kutipan wawancara */
+    .chat {
+      display: flex;
+      flex-direction: column;
+      gap: 14px
+    }
+
+    /* [BALON CHAT] Pesan sisi kiri */
+    .bub {
+      max-width: 92%;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: #fffaf0;
+      border: 1px solid var(--line)
+    }
+
+    /* [BALON BALASAN] Pesan sisi kanan */
+    .bub.r {
+      align-self: flex-end;
+      background: #e4ead9
+    }
+
+    /* [NAMA NARASUMBER] Label pembicara */
+    .bub small {
+      display: block;
+      font-weight: 700;
+      color: var(--maroon)
+    }
+
+    /* [POTENSI] Angka sorotan dan ikon */
+    .big {
+      font: 700 2.4rem 'Cormorant Garamond', serif;
+      color: var(--maroon);
+      line-height: 1
+    }
+
+    /* [IKON KONTEN] Ukuran ikon pada kartu */
+    .ico {
+      font-size: 1.6rem
+    }
+
+    /* [JUDUL KELOMPOK] Heading subbagian potensi */
+    h3.grp {
+      margin: 1.8rem 0 .8rem;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 4px
+    }
+
+    /* [PROSESI TANAM] Daftar tahapan bercocok tanam */
+    .steps {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 4px 2px 14px;
+      scroll-snap-type: x mandatory;
+      counter-reset: s
+    }
+
+    /* [ITEM PROSESI] Tampilan tiap tahapan */
+    .steps li {
+      flex: 0 0 190px;
+      scroll-snap-align: start;
+      counter-increment: s;
+      background: #fffaf0;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--green);
+      border-radius: var(--r);
+      padding: 14px
+    }
+
+    /* [NOMOR PROSESI] Nomor otomatis pada tiap tahapan */
+    .steps li::before {
+      content: counter(s);
+      display: block;
+      font: 700 1.8rem 'Cormorant Garamond', serif;
+      color: var(--maroon)
+    }
+
+    /* [KETERANGAN PROSESI] Teks kecil di bawah tahap */
+    .steps small {
+      display: block;
+      color: var(--brown)
+    }
+
+    /* [HUKUM ADAT] Daftar ketentuan dan sanksi */
+    .law {
+      display: grid;
+      gap: 8px;
+      margin: 1rem 0
+    }
+
+    /* [BARIS HUKUM] Tampilan tiap ketentuan */
+    .law div {
+      display: flex;
+      flex-direction: column;
+      background: #fffaf0;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--maroon);
+      border-radius: var(--r);
+      padding: 10px 14px
+    }
+
+    /* [KEPALA TABEL HUKUM] Label kolom untuk layar lebar */
+    .law .h {
+      display: none
+    }
+
+    /* [NILAI SANKSI] Gaya kolom sanksi */
+    .law span:last-child {
+      color: var(--green2);
+      font-weight: 600
+    }
+
+    /* [NAMA KETENTUAN] Gaya kolom pelanggaran */
+    .law span:first-child {
+      color: var(--brown);
+      font-size: .9rem
+    }
+
+    /* [CATATAN HUKUM] Keterangan tambahan di bawah daftar */
+    .note {
+      background: var(--cream2);
+      padding: 12px 16px;
+      border-radius: var(--r);
+      border: 1px dashed var(--brown)
+    }
+
+    /* [FOOTER] Bagian penutup halaman */
+    footer {
+      background: var(--green2);
+      color: #e6d9bd;
+      padding: 44px 0 28px;
+      text-align: center;
+      border-top: 6px solid var(--maroon)
+    }
+
+    /* [JUDUL FOOTER] Nama desa di bagian penutup */
+    footer h2 {
+      color: var(--cream)
+    }
+
+    /* [TAGLINE FOOTER] Slogan penutup */
+    footer .tag {
+      margin-top: 1rem
+    }
+
+    /* [TOMBOL KEMBALI] Tombol kembali ke atas */
+    #top {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 0;
+      background: var(--maroon);
+      color: #fff;
+      font-size: 1.3rem;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s
+    }
+
+    /* [TOMBOL KEMBALI AKTIF] Munculkan setelah scroll */
+    #top.show {
+      opacity: 1;
+      pointer-events: auto
+    }
+
+    /* [ANIMASI REVEAL] Elemen sebelum/sesudah masuk viewport */
+    .rv {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s, transform .7s
+    }
+
+    /* [REVEAL AKTIF] Kondisi setelah elemen terlihat */
+    .rv.in {
+      opacity: 1;
+      transform: none
+    }
+
+    /* [RESPONSIVE PONSEL] Ruang, tipografi, dan media untuk layar kecil */
+    @media(max-width:699px) {
+      section {
+        padding: 48px 0
+      }
+
+      .wrap {
+        padding: 0 16px
+      }
+
+      h2 {
+        font-size: clamp(1.75rem, 8vw, 2.1rem)
+      }
+
+      #beranda {
+        padding: 48px 0
+      }
+
+      #beranda h1 {
+        font-size: clamp(2.8rem, 13vw, 3.5rem)
+      }
+
+      .grid {
+        gap: 12px
+      }
+
+      .card {
+        padding: 16px
+      }
+
+      .facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .farm-hero {
+        width: 100%;
+        height: clamp(320px, 100vw, 420px);
+        min-height: 0;
+        aspect-ratio: auto
+      }
+
+      .farm-hero__content {
+        top: 64%;
+        width: 92%;
+        padding: 18px 12px
+      }
+
+      .farm-hero__caption {
+        top: 10px;
+        right: 10px
+      }
+
+      .history-title {
+        transform: none
+      }
+    }
+
+    @media(max-width:359px) {
+      .facts {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(min-width:520px) and (max-width:699px) {
+
+      .grid.c2,
+      .grid.c3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    /* [RESPONSIVE TABLET] Grid dan alur untuk layar >= 700 px */
+    @media(min-width:700px) {
+      body {
+        font-size: 18px
+      }
+
+      .grid.c2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .grid.c3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .grid.c4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .flow {
+        flex-direction: row;
+        align-items: center
+      }
+
+      .flow li {
+        flex: 1
+      }
+
+      .flow li+li::before {
+        content: "→";
+        display: inline;
+        margin: 0 8px 0 -8px
+      }
+
+      .law {
+        gap: 0
+      }
+
+      .law div {
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 0;
+        border-left: 0;
+        border-top: 0
+      }
+
+      .law .h {
+        display: flex;
+        background: var(--green2);
+        color: #fff;
+        font-weight: 700
+      }
+
+      .law .h span {
+        color: #fff !important;
+        font-size: 1rem !important
+      }
+
+      .law span {
+        flex: 1
+      }
+    }
+
+    @media(min-width:960px) {
+      .grid.c3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+      }
+
+      .grid.c4,
+      .facts {
+        grid-template-columns: repeat(4, minmax(0, 1fr))
+      }
+    }
+
+    /* [RESPONSIVE DESKTOP] Navbar dan hero untuk layar >= 960 px */
+    @media(min-width:960px) {
+      .burger {
+        display: none
+      }
+
+      .menu {
+        position: static;
+        max-height: none;
+        display: flex;
+        border: 0;
+        background: none;
+        overflow: visible
+      }
+
+      .menu a {
+        position: relative;
+        padding: 10px 9px;
+        font-size: .92rem;
+        border: 0;
+        white-space: nowrap
+      }
+
+      .menu a::after {
+        content: "";
+        position: absolute;
+        right: 9px;
+        bottom: 4px;
+        left: 9px;
+        height: 2px;
+        background: var(--maroon);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .22s ease
+      }
+
+      .menu a:hover,
+      .menu a:focus-visible {
+        padding-left: 9px;
+        background: none
+      }
+
+      .menu a:hover::after,
+      .menu a:focus-visible::after,
+      .menu a.active::after {
+        transform: scaleX(1)
+      }
+
+      .menu a.active {
+        color: var(--maroon)
+      }
+
+      #beranda h1 {
+        font-size: 4.2rem
+      }
+
+      .hero {
+        display: block
+      }
+    }
+
+    /* [LEBAR NAVBAR] Lebarkan area navigasi tanpa mengubah kontainer isi halaman */
+    @media(min-width:1362px) {
+      .wrap.nav {
+        max-width: min(94vw, 1600px)
+      }
+    }
+
+    /* [KARTU TARI] Pusatkan satu kartu tari dan batasi lebarnya */
+    .grid.c2.dance-grid {
+      grid-template-columns: minmax(0, 620px);
+      justify-content: center
+    }
+
+    /* [AKSESIBILITAS GERAK] Kurangi animasi sesuai preferensi pengguna */
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important
+      }
+
+      .rv {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body class="web-ai-edit-mode">
+  <!-- NAVBAR -->
+  <header data-builder-role="site-header" data-builder-id="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#beranda" data-builder-role="primary-cta" data-builder-id="primary-cta">Desa Limbong</a>
+      <button class="burger" aria-label="Menu" aria-expanded="false" data-builder-role="action"
+        data-builder-id="action"><span></span><span></span><span></span></button>
+      <nav aria-label="Navigasi utama" data-builder-role="navigation" data-builder-id="navigation">
+        <ul class="menu">
+          <li><a href="#beranda" class="active" data-builder-role="action" data-builder-id="action-2">Beranda</a></li>
+          <li><a href="#sejarah" class="" data-builder-role="action" data-builder-id="action-3">Sejarah</a></li>
+          <li><a href="#kelembagaan" class="" data-builder-role="action" data-builder-id="action-4">Kelembagaan Adat</a>
+          </li>
+          <li><a href="#tomakaka" class="" data-builder-role="action" data-builder-id="action-5">Tomakaka</a></li>
+          <li><a href="#potensi" class="" data-builder-role="action" data-builder-id="action-6">Potensi</a></li>
+          <li><a href="#budaya" class="" data-builder-role="action" data-builder-id="action-7">Budaya</a></li>
+          <li><a href="#hukum" class="" data-builder-role="action" data-builder-id="action-8">Hukum Adat</a></li>
+          <li><a href="#bahasa" class="" data-builder-role="action" data-builder-id="action-9">Bahasa</a></li>
+          <li><a href="#seni" class="" data-builder-role="action" data-builder-id="action-10">Seni</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main data-builder-role="main-content" data-builder-id="main-content">
+    <!-- 1. HERO -->
+    <section id="beranda" data-builder-role="hero-section" data-builder-id="hero-section">
+      <video class="hero-background" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
+        tabindex="-1">
+        <source src="Video%20kkn%20.mp4" type="video/mp4">
+      </video>
+      <div class="wrap">
+        <div class="hero">
+          <div>
+            <h1 class="" data-builder-role="hero-title" data-builder-id="hero-title">Desa Limbong</h1>
+            <p class="tag" data-builder-role="hero-subtitle" data-builder-id="hero-subtitle">Menjaga adat, merawat tanah
+              leluhur</p>
+            <p class="sub" data-builder-role="body-text" data-builder-id="body-text">Komunitas Adat Limbong, Tana
+              Rongkong, Luwu Utara</p>
+            <p class="sub" data-builder-role="body-text" data-builder-id="body-text">KKN UIN PALOPO ANGKATAN XLVIII</p>
+            <a class="btn" href="#sejarah" data-builder-role="action" data-builder-id="action-11">Gulir ke bawah ↓</a>
+          </div>
+        </div>
+        <div class="grid facts">
+          <div><b>Provinsi</b>Sulawesi Selatan</div>
+          <div><b>Kabupaten</b>Luwu Utara</div>
+          <div><b>Kecamatan</b>Rongkong</div>
+          <div><b>Kondisi wilayah</b>Pegunungan</div>
+          <div><b>Luas wilayah</b>8.880 m²</div>
+          <div><b class="">Jumlah penduduk</b>415 jiwa</div>
+          <div><b>Bahasa</b>Bahasa Rongkong</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SEJARAH -->
+    <section id="sejarah" data-builder-role="section" data-builder-id="section">
+      <div class="wrap rv in">
+        <h2 class="history-title" data-builder-role="section-heading" data-builder-id="section-heading">Sejarah Desa dan
+          Komunitas Adat Limbong</h2>
+        <div class="grid c2">
+          <div class="history-copy">
+            <p class="" data-builder-role="body-text" data-builder-id="body-text-1">Komunitas adat Limbong adalah
+              keturunan Lamarancina yang disebut To Rongkong, sepupu satu kali Sawerigading. Lamarancina menyebarkan
+              keturunan pertama di tanah Rongkong. Kampung pertama persebaran manusia di Tana
+              Rongkong adalah Kanandede (Ne'Bulu) dan Uri (Ne'Muala), keduanya bersaudara.</p>
+            <p class="" data-builder-role="body-text" data-builder-id="body-text-2">Limbong adalah komunitas di Tana
+              Rongkong yang mengangkat Tomakaka pertama bernama Wijo Langi, lalu membentuk kelembagaan adat hingga
+              Tomakaka saat ini, Hj. Wajallangi. Masyarakat mendiami kampung ini
+              turun-temurun sambil menyebarkan adat istiadat dan mengangkat perangkat adat.</p>
+          </div>
+          <div>
+            <div class="ph history-photo"><img src="Plang%20Desa%20.jpeg" alt="Plang Wilayah Adat Komunitas Limbong"
+                loading="lazy" decoding="async"></div>
+            <blockquote class="">Pemimpin ditentukan melalui musyawarah (massiaja'). Tomakaka pertama adalah Tomakaka
+              Salassa' dan Tomakaka Jalajja'.</blockquote>
+          </div>
+        </div>
+        <h3 class="" data-builder-role="section-heading" data-builder-id="section-heading-2">Alur silsilah</h3>
+        <ol class="flow">
+          <li>Lamarancina</li>
+          <li class="">Kanandede &amp; Uri</li>
+          <li>Wijo Langi</li>
+          <li>Tomakaka</li>
+          <li>Hj. Wajallangi</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 3. KELEMBAGAAN -->
+    <section id="kelembagaan" class="alt" data-builder-role="section" data-builder-id="section-2">
+      <div class="wrap rv in">
+        <h2 data-builder-role="section-heading" data-builder-id="section-heading-3">Perangkat Kelembagaan Adat</h2>
+        <div class="grid c3">
+          <div class="card">
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-4">Tomakaka</h3>
+            <p data-builder-role="body-text" data-builder-id="body-text-6">Pemimpin masyarakat adat yang menjalankan
+              hukum adat. Terdiri dari Tomakaka Salassa dan Tomakaka Jalajja.</p>
+          </div>
+          <div class="card">
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-5">Tosiaja</h3>
+            <p data-builder-role="body-text" data-builder-id="body-text-7">Berkaitan dengan keamanan dan ketertiban,
+              serta musyawarah.</p>
+          </div>
+          <div class="card">
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-6">Pongngarong</h3>
+            <p data-builder-role="body-text" data-builder-id="body-text-8">Berkaitan dengan membangun kehidupan
+              masyarakat adat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TOMAKAKA -->
+    <section id="tomakaka" data-builder-role="product-section" data-builder-id="product-section">
+      <div class="wrap rv in">
+        <h2 class="" data-builder-role="section-heading" data-builder-id="section-heading-7">Sejarah Kepemimpinan
+          Tomakaka Limbong</h2>
+        <p class="lead" data-builder-role="body-text" data-builder-id="body-text-9">Berdasarkan wawancara dengan Hj.
+          Wajallangi.</p>
+        <ul class="tl">
+          <li class="rv in"><b>1946</b>
+            <p class="" data-builder-role="body-text" data-builder-id="body-text-10">Nenek Makkasau, yang sempat
+              menjabat Tomakaka Limbong, meninggal dibunuh oleh Belanda pada masa penjajahan.</p>
+          </li>
+          <li class="rv in"><b>1954</b>
+            <p data-builder-role="body-text" data-builder-id="body-text-11">Masyarakat Rongkong diungsikan ke kota
+              akibat pemberontakan DI/TII. Seluruh kampung dari Desa Pongtattu (Salukanan) sampai Salurante-Amboan
+              terbakar, termasuk lumbung padi. Hanya tersisa satu rumah adat di Desa Komba, yang kemudian diruntuhkan
+              oleh kepala desa saat itu, sehingga rumah adat di Rongkong tidak lagi ada. Warga yang tidak mengungsi
+              bersembunyi di hutan selama beberapa bulan.</p>
+          </li>
+          <li class="rv in"><b>1962</b>
+            <p data-builder-role="body-text" data-builder-id="body-text-12">Masyarakat diperbolehkan kembali ke
+              Rongkong. Perangkat adat Pongngarong dan Tosiaja' sudah ada, tetapi Tomakaka belum.</p>
+          </li>
+          <li class="rv in"><b>1972</b>
+            <p data-builder-role="body-text" data-builder-id="body-text-13">Setelah tidak ada paman yang bersedia, tokoh
+              adat menunjuk suami Hj. Wajallangi. Setelah meminta nasihat ayahnya di Sabbang (yang juga Tomakaka
+              Pongtattu), diadakan pasitandrapadang.</p>
+          </li>
+          <li class="rv in"><b>1985</b>
+            <p data-builder-role="body-text" data-builder-id="body-text-14">Pengukuhan dilaksanakan setelah hasil
+              pertanian meningkat tiga tahun berturut-turut dan pasangan Tomakaka (dua Tomakaka: Unnisunggi Jalajja' dan
+              Unnisunggi Salassa') sudah ada. Pesta adat memotong minimal lima kerbau: Ma'bangungan Padang, Rengnge'
+              sebagai syukur kepada masyarakat, Tomakaka yang dikukuhkan, dalam rumah bersama Indo' Dapo', dan untuk
+              pasangan atau orang tuanya.</p>
+          </li>
+          <li class="rv in"><b>1993</b>
+            <p data-builder-role="body-text" data-builder-id="body-text-15">Suami Hj. Wajallangi wafat, jabatan
+              dilimpahkan kepada istrinya. Hj. Wajallangi menjadi pemangku adat Limbong dari 1993 hingga sekarang.</p>
+          </li>
+        </ul>
+        <details open="">
+          <summary>Baca selengkapnya: proses pengangkatan Tomakaka</summary>
+          <div class="acc-body">
+            <p data-builder-role="body-text" data-builder-id="body-text-16"><b>Pasitandrapadang.</b> Tahap musyawarah
+              dalam proses pengangkatan Tomakaka.</p>
+            <p data-builder-role="body-text" data-builder-id="body-text-17"><b>Pangadaranpitu.</b> Tujuh kampung yang
+              dipimpin Matua, bukan Tomakaka.</p>
+            <p data-builder-role="body-text" data-builder-id="body-text-18"><b>Pongngarong Manganan.</b> Berperan
+              mendoakan dengan bahasa sastra daerah.</p>
+            <p data-builder-role="body-text" data-builder-id="body-text-19"><b>Syarat pengukuhan.</b> Berdasarkan hasil
+              pertanian. Jika hasil pertanian merosot, pengukuhan tidak dilaksanakan, disebut "Dipantungku".</p>
+          </div>
+        </details>
+
+        <h2 style="margin-top:2.6rem" data-builder-role="section-heading" data-builder-id="section-heading-8">Percakapan
+          dengan Orang Tua Hj. Wajallangi</h2>
+        <div class="chat">
+          <div class="bub"><small>Hj. Wajallangi</small><em>"Dipakendekki ko jujungan anakta na dipakendekki ko jujungan
+              le'. Matasik memang ko iko, karena manasu ko iko."</em></div>
+          <div class="bub r"><small>Bpk Hj. Wajallangi</small><em>"Mutiro naku anak"</em> (artinya: lihat keadaan saya
+            bagaimana).</div>
+          <div class="bub r"><small>Bpk Hj. Wajallangi</small>Jabatan yang dibutuhkan masyarakat harus diterima karena
+            pesan leluhur. Lalu diminta kembali dan menyampaikan kepada orang-orang tua.</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 5. POTENSI -->
+    <section id="potensi" class="alt" data-builder-role="section" data-builder-id="section-3">
+      <div class="wrap rv in">
+        <h2 data-builder-role="section-heading" data-builder-id="section-heading-9">Potensi Alam dan Ekonomi</h2>
+        <p class="lead potensi-lead" data-builder-role="body-text" data-builder-id="body-text-20">Desa Limbong memiliki
+          potensi utama
+          berupa panorama pegunungan tertinggi, sawah berundak yang indah, dan udara sejuk dataran tinggi.</p>
+        <h2 class="grp" data-builder-role="section-heading" data-builder-id="section-heading-10">Keindahan dan Wisata
+          Alam</h2>
+        <div class="grid c2">
+          <div class="card">
+            <div class="ph photo-frame house-photo"><img src="tempat%20wisata.jpeg"
+                alt="Tempat wisata di Desa Limbong" loading="lazy" decoding="async"></div><span class="ico">⛰️</span>
+            <div class="big">Wisata Limbong</div>
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-11">Wakatar dan Villa Gerani Nase
+            <p data-builder-role="body-text" data-builder-id="body-text-21">Mencakup tempat wisata yang ada di Desa
+              Limbong.</p>
+          </div>
+          <div class="card">
+            <div class="weather-feature">
+              <div class="ph weather-photo"><img src="Suhu.jpeg" alt="Tangkapan layar prakiraan suhu di Luwu Utara"
+                  loading="lazy" decoding="async"></div>
+              <div class="temperature-reading">
+                <span class="temperature-caption">KISARAN SUHU HARIAN</span>
+                <strong class="temperature-value">14–19<small>°C</small></strong>
+                <div class="temperature-scale" aria-hidden="true"></div>
+                <div class="temperature-labels"><span>Malam 14°</span><span>Siang hingga 19°</span></div>
+              </div>
+            </div>
+            <span class="ico" aria-hidden="true">❄️</span>
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-12">Suhu Dingin</h3>
+            <p data-builder-role="body-text" data-builder-id="body-text-22">16–19°C siang hari, turun hingga 14°C
+              malam
+              hari, mirip kawasan Malino di Gowa.</p>
+          </div>
+          <div class="card">
+            <div class="ph photo-frame persawahan-photo"><img src="Terasering.jpeg"
+                alt="Panorama sawah terasering di Desa Limbong" loading="lazy" decoding="async"></div><span
+              class="ico">🌾</span>
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-13">Persawahan Terasering</h3>
+            <p data-builder-role="body-text" data-builder-id="body-text-23">Liukan pematang yang tersusun rapi.</p>
+          </div>
+          <div class="card">
+            <div class="ph photo-frame cloud-photo"><img src="SUNRISEE.jpeg"
+                alt="Panorama matahari terbit di Desa Limbong" loading="lazy" decoding="async"></div><span
+              class="ico">🌅</span>
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-14">Lanskap Sunrise/Sunset</h3>
+            <p data-builder-role="body-text" data-builder-id="body-text-24">Latar pegunungan dan hamparan awan.</p>
+          </div>
+        </div>
+        <h3 class="grp" data-builder-role="section-heading" data-builder-id="section-heading-15">Pertanian dan Sumber
+          Daya</h3>
+        <figure class="ph farm-hero">
+          <img src="Persawahan.jpeg" alt="Lanskap pertanian sawah di Desa Limbong" loading="eager" decoding="async">
+          <figcaption class="farm-hero__caption">Sumber daya: tanah pertanian lokal</figcaption>
+          <div class="farm-hero__content">
+            <span class="farm-hero__eyebrow">Pertanian Limbong</span>
+            <h3>Tanah subur, hasil yang menghidupkan.</h3>
+            <p>Persawahan terasering dan lahan pertanian menjadi fondasi ekonomi serta identitas masyarakat adat
+              Limbong.</p>
+          </div>
+        </figure>
+        <div class="grid c2">
+          <div class="card"><span class="ico">🌱</span>
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-16">Pertanian Sawah</h3>
+            <p data-builder-role="body-text" data-builder-id="body-text-25">Sebagian besar warga adalah petani sawah,
+              memanfaatkan kesuburan tanah pegunungan.</p>
+          </div>
+          <div class="card"><span class="ico">☕</span>
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-17">Hortikultura dan Kopi</h3>
+            <p data-builder-role="body-text" data-builder-id="body-text-26">Dataran tinggi mendukung produk kopi lokal
+              dan tanaman hortikultura.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. BUDAYA -->
+    <section id="budaya" data-builder-role="section" data-builder-id="section-4">
+      <div class="wrap rv in">
+        <h2 data-builder-role="section-heading" data-builder-id="section-heading-18">Budaya dan Tradisi</h2>
+        <p data-builder-role="body-text" data-builder-id="body-text-27">Masyarakat adat Limbong hidup di pegunungan
+          dengan menjunjung tatanan adat leluhur yang terikat secara historis dengan kedatuan Luwu. Rongkong dikenal
+          sebagai Tana Masakke (tanah yang diberkati/penuh berkah).</p>
+        <div class="grid c2">
+          <div class="ph photo-frame"><img src="GOTONG%20ROYONG.jpeg"
+              alt="Kegiatan gotong royong masyarakat Desa Limbong" loading="lazy" decoding="async"></div>
+          <div class="ph photo-frame"><img src="perkebunan%20kopi.jpeg" alt="Perkebunan kopi di Desa Limbong"
+              loading="lazy" decoding="async"></div>
+        </div>
+        <p data-builder-role="body-text" data-builder-id="body-text-28">Nilai yang dijaga: kebersamaan, gotong royong,
+          kearifan lokal dalam mengelola alam (pertanian dan perkebunan kopi di wilayah Uro), sistem kekerabatan yang
+          kuat, dan hukum adat yang dipimpin Tomakaka.</p>
+        <h3 data-builder-role="section-heading" data-builder-id="section-heading-19">Prosesi Bercocok Tanam Padi</h3>
+        <ol class="steps">
+          <li>Ma'tosso <small>(umbungka tana)</small></li>
+          <li>Ma'palau'lalan <small>(mangambo)</small></li>
+          <li>Ma'pandanan pebuak</li>
+          <li>Ma'rinding</li>
+          <li>Ma'rampang</li>
+          <li>Mangkale'te' <small>(mepare)</small></li>
+          <li>Ma'po'o</li>
+          <li>Ma'bangunan tendan <small>(manganna)</small></li>
+          <li>Manampun <small>(umpussai pentaunan)</small></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 7. HUKUM ADAT -->
+    <section id="hukum" class="alt" data-builder-role="section" data-builder-id="section-5">
+      <div class="wrap rv in">
+        <h2 data-builder-role="section-heading" data-builder-id="section-heading-20">Hukum Adat Rongkong</h2>
+        <p class="lead" data-builder-role="body-text" data-builder-id="body-text-29">Dikenal dengan nama Sapa' Sangpulo
+          Pitu, terdiri dari 17 bagian.</p>
+        <div class="law">
+          <div class="h"><span>Pelanggaran/Ketentuan</span><span>Sanksi/Denda</span></div>
+          <div><span>Tourrandan Bala Batunna</span><span>Tedong</span></div>
+          <div><span>Toumbungka' Ba'bana</span><span>Tedong/dipali</span></div>
+          <div><span>Kakean Putaran</span><span>Tedong</span></div>
+          <div><span>Kokoan Limbong</span><span>Tedong</span></div>
+          <div><span>Bungkaran Alang</span><span>Tedong</span></div>
+          <div><span>Bungkaran Kampolo</span><span>Tedong</span></div>
+          <div><span>Bungkaran Tambing</span><span>Sampin Pitung Da'pa</span></div>
+          <div><span>Kakean Patengka</span><span>Bai</span></div>
+          <div><span>Lellean Tallang</span><span>Piso</span></div>
+          <div><span>Tongkaran Pa'ti</span><span>Penusuk</span></div>
+          <div><span>Saluan Poja</span><span>Tompu Lotong</span></div>
+          <div><span>Menangka/Massanginawai</span><span>Di Lompo-Lompo</span></div>
+          <div><span>Siremen/Bulean</span><span>Di Lompo-Lompo</span></div>
+          <div><span>Lando Lantek</span><span>Di Lompo-Lompo</span></div>
+          <div><span>Lando Lila</span><span>Diso'pong Lilana (Tedong)</span></div>
+          <div><span>Lesoan Kada</span><span>Tedong</span></div>
+          <div><span>Alaan Baine: Tomakaka</span><span>Tedong</span></div>
+          <div><span>Alaan Baine: Irengnge'</span><span>Sambu Sura'</span></div>
+          <div><span>Alaan Baine: Sambua'</span><span>Sampin Limbu</span></div>
+        </div>
+        <p class="note" data-builder-role="body-text" data-builder-id="body-text-30">Catatan: "Dilompo-lompo" artinya
+          didenda dengan memotong ayam sampai sepuluh ekor.</p>
+      </div>
+    </section>
+
+    <!-- 8. BAHASA -->
+    <section id="bahasa" data-builder-role="section" data-builder-id="section-6">
+      <div class="wrap rv in">
+        <h2 data-builder-role="section-heading" data-builder-id="section-heading-21">Bahasa</h2>
+        <p data-builder-role="body-text" data-builder-id="body-text-31">Masyarakat Limbong secara turun-temurun
+          menggunakan Bahasa Rongkong sebagai bahasa ibu, salah satu identitas penting suku Rongkong di dataran tinggi
+          Luwu Utara.</p>
+        <div class="grid c3">
+          <div class="quote">"Dipakendekki ko jujungan anakta..."</div>
+          <div class="quote">"Mutiro naku anak"<br><small>(lihat keadaan saya bagaimana)</small></div>
+          <div class="quote">"Ulurisituang Latte' Ampu disanga Tau Lamingkala ditau tana Puang"</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. SENI -->
+    <section id="seni" class="alt" data-builder-role="section" data-builder-id="section-7">
+      <div class="wrap rv in">
+        <h2 data-builder-role="section-heading" data-builder-id="section-heading-22">Seni dan Kerajinan Tradisional</h2>
+        <h3 data-builder-role="section-heading" data-builder-id="section-heading-23">Tenun Ikat Rongkong</h3>
+        <p data-builder-role="body-text" data-builder-id="body-text-32">Kain tenun tradisional yang diwariskan
+          turun-temurun dengan motif berfilosofi kehidupan.</p>
+        <div class="grid c2">
+          <div class="card">
+            <div class="ph photo-frame"><img src="Sipong%20Sirenden%20Sipomandi.jpeg"
+                alt="Motif tenun ikat Sipong Sirenden Sipomandi" loading="lazy" decoding="async"></div>
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-24">Sekong Sirenden Sipomandi</h3>
+          </div>
+          <div class="card">
+            <div class="ph photo-frame"><img src="Pa%E2%80%99gandrang%20Lolo%20dan%20Pa%E2%80%99gandrang%20Kaindo.jpeg"
+                alt="Motif tenun ikat Pa’gandrang Lolo dan Pa’gandrang Kaindo" loading="lazy" decoding="async"></div>
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-25">Pa’gandrang Lolo dan
+              Pa’gandrang Kaindo</h3>
+          </div>
+        </div>
+        <h3 style="margin-top:2rem" data-builder-role="section-heading" data-builder-id="section-heading-27">Seni Tari
+        </h3>
+        <p data-builder-role="body-text" data-builder-id="body-text-33">Tarian tradisional dipentaskan saat penyambutan
+          tamu adat atau perayaan.</p>
+        <div class="grid c2 dance-grid">
+          <div class="card">
+            <div class="ph photo-frame"><img src="Tari%20Majjaga.jpeg" alt="Pertunjukan Tari Majjaga" loading="lazy"
+                decoding="async"></div>
+            <h3 data-builder-role="section-heading" data-builder-id="section-heading-28">Tari Majjaga</h3>
+            <p data-builder-role="body-text" data-builder-id="body-text-34">Simbol persahabatan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer data-builder-role="site-footer" data-builder-id="site-footer">
+    <div class="wrap">
+      <h2 data-builder-role="section-heading" data-builder-id="section-heading-30">Desa Limbong</h2>
+      <p data-builder-role="body-text" data-builder-id="body-text-36">Komunitas Adat Limbong &amp; KKN UIN PALOPO
+        ANGKATAN XLVIII</p>
+      <p data-builder-role="body-text" data-builder-id="body-text-36">Tana Rongkong, Kecamatan Rongkong, Kabupaten Luwu
+        Utara,</p>
+      <p data-builder-role="body-text" data-builder-id="body-text-37"> Sulawesi Selatan</p>
+      <p class="tag" data-builder-role="body-text" data-builder-id="body-text-38">Tana Masakke, tanah yang diberkati</p>
+    </div>
+  </footer>
+  <button id="top" aria-label="Kembali ke atas" class="" data-builder-role="action"
+    data-builder-id="action-12">↑</button>
+  <script>
+    /* ===== Desa Limbong — script.js ===== */
+    (function () {
+      // Hamburger menu
+      var b = document.querySelector('.burger'), m = document.querySelector('.menu');
+      var scrollFrame;
+      b.addEventListener('click', function () {
+        var o = m.classList.toggle('open');
+        b.setAttribute('aria-expanded', o);
+      });
+      m.addEventListener('click', function (e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+
+        m.classList.remove('open');
+        b.setAttribute('aria-expanded', false);
+
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+        var section = document.querySelector(link.getAttribute('href'));
+        if (!section) return;
+
+        e.preventDefault();
+        if (window.location.hash !== link.hash) window.history.pushState(null, '', link.hash);
+
+        if (scrollFrame) window.cancelAnimationFrame(scrollFrame);
+
+        var start = window.scrollY;
+        var headerOffset = document.querySelector('header').offsetHeight + 6;
+        var destination = Math.max(0, Math.min(
+          section.getBoundingClientRect().top + start - headerOffset,
+          document.documentElement.scrollHeight - window.innerHeight
+        ));
+
+        var root = document.documentElement;
+        var scrollBehavior = root.style.scrollBehavior;
+        root.style.scrollBehavior = 'auto';
+        var startedAt;
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var duration = reduceMotion ? 320 : 700;
+        function animateScroll(timestamp) {
+          if (startedAt === undefined) startedAt = timestamp;
+          var progress = Math.min((timestamp - startedAt) / duration, 1);
+          var eased = progress < .5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+          window.scrollTo(0, start + (destination - start) * eased);
+
+          if (progress < 1) {
+            scrollFrame = window.requestAnimationFrame(animateScroll);
+          } else {
+            scrollFrame = undefined;
+            root.style.scrollBehavior = scrollBehavior;
+          }
+        }
+
+        scrollFrame = window.requestAnimationFrame(animateScroll);
+      });
+
+      // Scroll reveal
+      var rv = document.querySelectorAll('.rv');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: .12 });
+        rv.forEach(function (el) { io.observe(el); });
+      } else rv.forEach(function (el) { el.classList.add('in'); });
+
+      // Active nav
+      var links = document.querySelectorAll('.menu a');
+      var secs = [].map.call(links, function (a) { return document.querySelector(a.getAttribute('href')); });
+      var back = document.getElementById('top');
+      function onScroll() {
+        var y = window.scrollY + 90, cur = 0;
+        secs.forEach(function (s, i) { if (s && s.offsetTop <= y) cur = i; });
+        links.forEach(function (a, i) { a.classList.toggle('active', i === cur); });
+        back.classList.toggle('show', window.scrollY > 500);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+      // Back to top
+      back.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
+  </script>
+
+
+
+
+</body>
+
+</html>
